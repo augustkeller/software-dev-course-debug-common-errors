@@ -24,22 +24,22 @@ Think about which debugging methods you found most useful and how you might appl
 // Description:
 // This program is intended to display a simple prompt in the console but fails to run.
 
-console.log("Welcome to the bootcamp
+console.log("Welcome to the bootcamp"); // Syntax Error. There was a missing closing quotes, a missing closing parenthesis, and a missing semicolon.
 
-// What’s Wrong?
+// What’s Wrong? - Syntax Error. There is a missing closing quotes, a missing closing parenthesis, and a missing semicolon.
 
 
 // Program B
 // Description:
 // This code attempts to multiply each number in an array by 2 and display the results. However, it crashes at runtime.
 
-let numbers = [2, 4, "eight"];
+let numbers = [2, 4, 8]; // Runtime Error. The number 8 assignment was spelled out as a string "eight", which could not be recognized as a number.
 for (let i = 0; i < numbers.length; i++) {
   let doubled = numbers[i] * 2;
   console.log(doubled);
 }
 
-// What’s Wrong?
+// What’s Wrong? - Runtime Error. The number 8 assignment was spelled out as a string "eight", which could not be recognized as a number.
 
 
 
@@ -51,12 +51,12 @@ function isPrime(num) {
   if (num < 2) return false;
   for (let i = 2; i < num; i++) {
     if (num % i === 0) {
-      return true;  // Supposed to indicate num is NOT prime
+      return false;  // Supposed to indicate num is NOT prime // return assignment switched to false from true.
     }
   }
-  return false; // Supposed to indicate num IS prime
+  return true; // Supposed to indicate num IS prime // return assignment switched to true from false.
 }
 
 console.log(isPrime(7)); // Expected true but gets false
 
-// What’s Wrong?
+// What’s Wrong? - Logic Error. Return assignments true and false were swapped on lines 54 and 57.
